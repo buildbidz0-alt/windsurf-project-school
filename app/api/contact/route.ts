@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { supabase } from '@/lib/supabase';
 
 // Rate limiting store (in production, use Redis or similar)
 const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
@@ -96,6 +97,31 @@ async function saveToGoogleSheets(data: z.infer<typeof contactSchema>) {
   return true;
 }
 
+// Save to Supabase
+async function saveToSupabase(data: z.infer<typeof contactSchema>) {
+  const { error } = await supabase
+    .from('contact_submissions')
+    .insert([
+      {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        subject: data.subject,
+        message: data.message,
+        preferred_visit_date: data.preferredVisitDate || null,
+        created_at: new Date().toISOString(),
+      },
+    ]);
+
+  if (error) {
+    console.error('Error saving to Supabase:', error);
+    throw error;
+  }
+
+  console.log('Data saved to Supabase:', data);
+  return true;
+}
+
 export async function POST(request: NextRequest) {
   try {
     // Get client IP for rate limiting
@@ -118,6 +144,9 @@ export async function POST(request: NextRequest) {
 
     // Optionally save to Google Sheets
     await saveToGoogleSheets(validatedData);
+
+    // Save to Supabase
+    await saveToSupabase(validatedData);
 
     // Return success response
     return NextResponse.json(

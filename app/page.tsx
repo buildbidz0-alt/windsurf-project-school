@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/sections/HeroSection';
+import FounderMissionSection from '@/components/sections/FounderMissionSection';
 import WhyChooseUsSection from '@/components/sections/WhyChooseUsSection';
 import FeaturedProgramsSection from '@/components/sections/FeaturedProgramsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
@@ -20,6 +21,7 @@ export default function HomePage() {
   return (
     <Layout>
       <HeroSection />
+      <FounderMissionSection />
       <WhyChooseUsSection />
       <FeaturedProgramsSection />
       <TestimonialsSection />

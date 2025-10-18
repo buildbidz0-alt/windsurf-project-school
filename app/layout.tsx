@@ -18,38 +18,41 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "St. Augustine's Academy - Excellence in Learning. Leadership in Life.",
-    template: "%s | St. Augustine's Academy",
+    default: 'Narayana Public School - Transforming Rural Education, Empowering Every Child.',
+    template: '%s | Narayana Public School',
   },
-  description: 'Premier educational institution offering world-class academics, holistic development, and modern facilities. Nurturing future leaders through excellence in education.',
+  description:
+    'Narayana Public School in Gopalganj, Bihar delivers modern, technology-enabled education that empowers rural children to thrive.',
   keywords: ['school', 'education', 'academy', 'learning', 'students', 'academics', 'admissions'],
-  authors: [{ name: "St. Augustine's Academy" }],
-  creator: "St. Augustine's Academy",
-  publisher: "St. Augustine's Academy",
-  metadataBase: new URL('https://staugustines-academy.vercel.app'),
+  authors: [{ name: 'Narayana Public School' }],
+  creator: 'Narayana Public School',
+  publisher: 'Narayana Public School',
+  metadataBase: new URL('https://narayanapublicschool.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://staugustines-academy.vercel.app',
-    siteName: "St. Augustine's Academy",
-    title: "St. Augustine's Academy - Excellence in Learning. Leadership in Life.",
-    description: 'Premier educational institution offering world-class academics, holistic development, and modern facilities.',
+    url: 'https://narayanapublicschool.vercel.app',
+    siteName: 'Narayana Public School',
+    title: 'Narayana Public School - Transforming Rural Education, Empowering Every Child.',
+    description:
+      'Narayana Public School delivers modern, technology-enabled education to rural communities in Gopalganj, Bihar.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: "St. Augustine's Academy Campus",
+        alt: 'Narayana Public School Campus',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "St. Augustine's Academy - Excellence in Learning. Leadership in Life.",
-    description: 'Premier educational institution offering world-class academics, holistic development, and modern facilities.',
+    title: 'Narayana Public School - Transforming Rural Education, Empowering Every Child.',
+    description:
+      'Narayana Public School in Gopalganj, Bihar empowers rural students with technology-rich, future-ready learning.',
     images: ['/og-image.jpg'],
   },
   robots: {

@@ -8,11 +8,13 @@ import NewsEventsSection from '@/components/sections/NewsEventsSection';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "St. Augustine's Academy - Excellence in Learning. Leadership in Life.",
-  description: 'Premier educational institution offering world-class academics, holistic development, and modern facilities. Nurturing future leaders through excellence in education.',
+  title: 'Narayana Public School - Transforming Rural Education, Empowering Every Child.',
+  description:
+    'Discover how Narayana Public School in Gopalganj, Bihar is modernizing rural education with technology-driven learning.',
   openGraph: {
-    title: "St. Augustine's Academy - Excellence in Learning. Leadership in Life.",
-    description: 'Premier educational institution offering world-class academics, holistic development, and modern facilities.',
+    title: 'Narayana Public School - Transforming Rural Education, Empowering Every Child.',
+    description:
+      'Narayana Public School delivers AI-enhanced, future-ready education for rural students in Gopalganj, Bihar.',
     images: ['/hero.jpg'],
   },
 };
